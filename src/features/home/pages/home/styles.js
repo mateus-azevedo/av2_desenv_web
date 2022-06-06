@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.div`
-  background-color: yellow;
-`;
+export const Wrapper = styled.div``;
 
 export const Title = styled.h1``;

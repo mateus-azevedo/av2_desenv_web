@@ -1,12 +1,13 @@
 import { RoutesConfig } from "./config";
+import { Header } from "./components";
 
-import { Background } from "./components";
 import "./global.styles.css";
 
 export default function App() {
   return (
-    <Background>
+    <>
+      <Header />
       <RoutesConfig />
-    </Background>
+    </>
   );
 }
