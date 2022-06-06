@@ -1,13 +1,13 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
-import { RoutesConfig } from "./src/config";
+import App from "./App.js";
 
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
 
 root.render(
   <StrictMode>
-    <RoutesConfig />
+    <App />
   </StrictMode>
 );
