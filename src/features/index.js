@@ -1,3 +1,3 @@
-import * as HomeFeature from "./home";
+import * as MainFeature from "./main";
 
-export { HomeFeature };
+export { MainFeature };
