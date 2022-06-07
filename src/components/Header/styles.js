@@ -31,13 +31,17 @@ export const MarvelLogo = styled.img.attrs({ src: logo_marvel })``;
 
 export const WrapperRight = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+
+  padding: 0;
+  padding-top: 10px;
 `;
 
 export const Navbar = styled.ul`
   display: flex;
-  /* align-self: center; */
   list-style-type: none;
+
+  padding: 0;
 `;
 
 export const NavbarItem = styled.li`
@@ -60,12 +64,13 @@ export const NavbarItem = styled.li`
   }
 `;
 
-export const LoginButton = styled.button`
+export const LoginButton = styled.a`
   background-color: white;
   color: red;
   font-size: 20px;
+  text-decoration: none;
 
-  padding: 10px;
+  padding: 5px;
 
   border: 3px solid;
   border-radius: 30px;
@@ -74,6 +79,7 @@ export const LoginButton = styled.button`
 
   &:hover {
     transition: 0.5s;
-    opacity: 0.7;
+    background-color: #616b6f;
+    color: white;
   }
 `;
