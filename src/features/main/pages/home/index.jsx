@@ -1,10 +1,12 @@
 import React from "react";
 import * as Styled from "./styles";
 
+import { WrapperPage } from "../../../../components";
+
 export default () => {
   return (
-    <Styled.Wrapper>
+    <WrapperPage>
       <Styled.Title>Hello World</Styled.Title>
-    </Styled.Wrapper>
+    </WrapperPage>
   );
 };

@@ -1,0 +1,10 @@
+import styled from "styled-components";
+
+export const Wrapper = styled.main`
+  margin-top: 50px;
+`;
+
+export const WrapperContent = styled.div`
+  max-width: 1280px;
+  margin: 0 auto;
+`;
