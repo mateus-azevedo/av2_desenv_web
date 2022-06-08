@@ -41,3 +41,4 @@ packages/react-devtools-timeline/dist
 # ignore env files
 .env
 .env.production
+env.js
