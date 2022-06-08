@@ -1,3 +1,4 @@
+import React from "react";
 import { RoutesConfig } from "./config";
 import { Header } from "./components";
 
