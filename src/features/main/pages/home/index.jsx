@@ -10,16 +10,21 @@ export default (props) => {
   return (
     <WrapperPage>
       <Styled.Title>Hello World</Styled.Title>
-      {characters.map((character) => {
-        return (
-          <CardMarvel
-            key={character.id}
-            thumbnail={`${character.thumbnail.path}.${character.thumbnail.extension}`}
-            name={character.name}
-            description={character.description}
-          />
-        );
-      })}
+
+      <Styled.CardList>
+        {characters.map((character) => {
+          if (character.description) {
+            return (
+              <CardMarvel
+                key={character.id}
+                thumbnail={`${character.thumbnail.path}.${character.thumbnail.extension}`}
+                name={character.name}
+                description={character.description}
+              />
+            );
+          }
+        })}
+      </Styled.CardList>
     </WrapperPage>
   );
 };

@@ -3,6 +3,7 @@ import { Button, Card } from "react-bootstrap";
 
 export const Wrapper = styled(Card)`
   width: 18rem;
+  margin: 10px;
 `;
 
 export const Image = styled(Card.Img)``;
