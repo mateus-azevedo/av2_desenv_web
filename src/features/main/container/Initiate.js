@@ -1,16 +1,24 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Home } from "../pages";
 import { api } from "../../../services";
 
 const Initiate = () => {
-  useEffect(() => {
-    api
+  const [characters, setCharacters] = useState([]);
+
+  const fetchCharacters = async () => {
+    await api
       .get("characters")
-      .then((response) => console.log(response.data.data))
+      .then((response) => {
+        setCharacters(response.data.data.results);
+      })
       .catch((err) => console.log(err));
+  };
+
+  useEffect(() => {
+    fetchCharacters();
   }, []);
 
-  return <Home />;
+  return <Home characters={characters} />;
 };
 
 export default Initiate;
