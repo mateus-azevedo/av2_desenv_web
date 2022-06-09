@@ -1,7 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
+// import { Navigate } from "react-router-dom";
+import { AuthGoogle } from "../../context";
 import * as Styled from "./styles";
 
 export default () => {
+  const {
+    signInWithGoogle,
+    // signed
+  } = useContext(AuthGoogle.Context);
+
+  const handleLoginFromGoogle = async () => {
+    await signInWithGoogle();
+  };
+
   return (
     <Styled.Wrapper>
       <Styled.WrapperContent>
@@ -16,11 +27,7 @@ export default () => {
             <Styled.NavbarItem>USUÁRIO</Styled.NavbarItem>
           </Styled.Navbar>
 
-          <Styled.LoginButton
-            onClick={() => {
-              console.log("Login Button");
-            }}
-          >
+          <Styled.LoginButton onClick={() => handleLoginFromGoogle()}>
             LOGIN
           </Styled.LoginButton>
         </Styled.WrapperRight>
