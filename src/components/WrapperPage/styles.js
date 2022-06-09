@@ -5,6 +5,10 @@ export const Wrapper = styled.main`
 `;
 
 export const WrapperContent = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   max-width: 1280px;
   margin: 0 auto;
 `;
