@@ -1,3 +1,3 @@
-import * as AuthGoogle from "./authGoggle";
+import * as AuthGoogle from "./authGoogle";
 
 export { AuthGoogle };

@@ -1,4 +1,4 @@
 import api from "./api";
-import FirebaseConfig from "./firebase";
+import FirebaseConfig from "./firebaseConfig";
 
 export { api, FirebaseConfig };
