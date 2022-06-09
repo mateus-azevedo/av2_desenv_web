@@ -1,7 +1,11 @@
 import React from "react";
 import * as Styled from "./styles";
 
-import { CardMarvel, WrapperPage } from "../../../../components";
+import {
+  ActivityIndicator,
+  CardMarvel,
+  WrapperPage,
+} from "../../../../components";
 // import { WrapperPage } from "@components";
 
 export default (props) => {
@@ -10,7 +14,6 @@ export default (props) => {
   return (
     <WrapperPage>
       <Styled.Title>Hello World</Styled.Title>
-
       <Styled.CardList>
         {characters.map((character) => {
           return (
@@ -23,6 +26,7 @@ export default (props) => {
           );
         })}
       </Styled.CardList>
+      <ActivityIndicator />
     </WrapperPage>
   );
 };
