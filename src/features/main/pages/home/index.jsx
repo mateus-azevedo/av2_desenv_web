@@ -34,7 +34,7 @@ export default (props) => {
           return (
             <CardMarvel
               key={character.id}
-              thumbnail={`${character.thumbnail.path}.${character.thumbnail.extension}`}
+              thumbnail={`${character.thumbnail.path}/standard_amazing.${character.thumbnail.extension}`}
               name={character.name}
               description={character.description}
             />
@@ -42,7 +42,6 @@ export default (props) => {
           // }
         })}
       </Styled.CardList>
-      <Styled.Button onClick={() => handleMore()}>Carregar</Styled.Button>
     </WrapperPage>
   );
 };
