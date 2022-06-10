@@ -11,10 +11,10 @@ export default (props) => {
   async function saveFavoriteCharacter() {
     try {
       const character = await addDoc(userCollectionRef, {
-        id: props.id,
-        name: props.name,
-        description: props.description,
-        thumbnail: props.thumbnail,
+        id: props.character.id || null,
+        name: props.character.name || null,
+        description: props.character.description || null,
+        thumbnail: props.character.thumbnail || null,
       });
 
       console.log(character);
