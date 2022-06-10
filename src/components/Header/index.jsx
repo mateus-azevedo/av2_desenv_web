@@ -5,38 +5,67 @@ import { AuthGoogle } from "../../context";
 import * as Styled from "./styles";
 
 export default () => {
-  const {
-    signInWithGoogle,
-    // signed
-  } = useContext(AuthGoogle.Context);
+  const { signInWithGoogle, signOut, signed } = useContext(AuthGoogle.Context);
 
   const handleLoginFromGoogle = async () => {
     await signInWithGoogle();
   };
 
-  return (
-    <Styled.Wrapper>
-      <Styled.WrapperContent>
-        <Styled.WrapperLogo>
-          <Styled.UniLogo />
-          <Styled.MarvelLogo />
-        </Styled.WrapperLogo>
+  const handleLogoutFromGoogle = async () => {
+    await signOut();
+  };
 
-        <Styled.WrapperRight>
-          <Styled.Navbar>
-            <Link to="/">
-              <Styled.NavbarItem>HOME</Styled.NavbarItem>
-            </Link>
-            <Link to="/myfavorite">
-              <Styled.NavbarItem>USUÁRIO</Styled.NavbarItem>
-            </Link>
-          </Styled.Navbar>
+  if (signed) {
+    return (
+      <Styled.Wrapper>
+        <Styled.WrapperContent>
+          <Styled.WrapperLogo>
+            <Styled.UniLogo />
+            <Styled.MarvelLogo />
+          </Styled.WrapperLogo>
 
-          <Styled.LoginButton onClick={() => handleLoginFromGoogle()}>
-            LOGIN
-          </Styled.LoginButton>
-        </Styled.WrapperRight>
-      </Styled.WrapperContent>
-    </Styled.Wrapper>
-  );
+          <Styled.WrapperRight>
+            <Styled.Navbar>
+              <Link to="/">
+                <Styled.NavbarItem>HOME</Styled.NavbarItem>
+              </Link>
+              <Link to="/myfavorite">
+                <Styled.NavbarItem>USUÁRIO</Styled.NavbarItem>
+              </Link>
+            </Styled.Navbar>
+
+            <Styled.LoginButton onClick={() => handleLogoutFromGoogle()}>
+              LOGOUT
+            </Styled.LoginButton>
+          </Styled.WrapperRight>
+        </Styled.WrapperContent>
+      </Styled.Wrapper>
+    );
+  } else {
+    return (
+      <Styled.Wrapper>
+        <Styled.WrapperContent>
+          <Styled.WrapperLogo>
+            <Styled.UniLogo />
+            <Styled.MarvelLogo />
+          </Styled.WrapperLogo>
+
+          <Styled.WrapperRight>
+            <Styled.Navbar>
+              <Link to="/">
+                <Styled.NavbarItem>HOME</Styled.NavbarItem>
+              </Link>
+              <Link to="/myfavorite">
+                <Styled.NavbarItem>USUÁRIO</Styled.NavbarItem>
+              </Link>
+            </Styled.Navbar>
+
+            <Styled.LoginButton onClick={() => handleLoginFromGoogle()}>
+              LOGIN
+            </Styled.LoginButton>
+          </Styled.WrapperRight>
+        </Styled.WrapperContent>
+      </Styled.Wrapper>
+    );
+  }
 };
