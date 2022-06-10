@@ -23,11 +23,19 @@ const Favorite = () => {
   useEffect(() => {
     const getCharacters = async () => {
       const data = await getDocs(userCollectionRef);
-      const charactersCollection = data.docs.map((doc) => ({
-        ...doc.data(),
-        id: doc.id,
-      }));
+      const charactersCollection = data.docs.map((doc) => {
+        // console.log(doc);
+        console.log(doc._document.data.value.mapValue.fields.id.integerValue);
+        const idCharacter =
+          doc._document.data.value.mapValue.fields.id.integerValue;
 
+        return {
+          ...doc.data(),
+          id: idCharacter,
+        };
+      });
+
+      console.log("charactersCollection", charactersCollection);
       setCharacters(charactersCollection);
     };
 
