@@ -5,7 +5,8 @@ const RoutesConfig = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<MainFeature.Container.Initiate />} />
+        <Route path="/" element={<MainFeature.Container.Favorite />} />
+        {/* <Route path="/myfavorite" element={} /> */}
       </Routes>
     </BrowserRouter>
   );
