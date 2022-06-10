@@ -1,3 +1,4 @@
-import Home from "./home";
+import FavoritePage from "./favorite";
+import HomePage from "./home";
 
-export { Home };
+export { FavoritePage, HomePage };

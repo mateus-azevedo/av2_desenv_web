@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Home } from "../pages";
+import { HomePage } from "../pages";
 import { api } from "../../../services";
 
 const Initiate = () => {
@@ -46,7 +46,7 @@ const Initiate = () => {
     window.addEventListener("scroll", handleScroll);
   }, []);
 
-  return <Home characters={characters} />;
+  return <HomePage characters={characters} />;
 };
 
 export default Initiate;
