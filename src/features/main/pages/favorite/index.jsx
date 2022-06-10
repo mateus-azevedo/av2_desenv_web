@@ -3,10 +3,12 @@ import { WrapperPage, CardMarvel } from "../../../../components";
 import * as Styled from "./styles";
 
 export default (props) => {
+  const { characters } = props;
+
   return (
     <WrapperPage>
       <Styled.CardList>
-        {props.characters.map((character) => {
+        {characters?.map((character) => {
           return (
             <CardMarvel
               key={character.id}

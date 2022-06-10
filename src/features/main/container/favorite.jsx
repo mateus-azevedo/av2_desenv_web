@@ -34,6 +34,9 @@ const Favorite = () => {
     getCharacters();
   }, []);
 
+  // console.log(characters);
+
+  // return <h1>firestore {JSON.stringify(characters)}</h1>;
   return <FavoritePage characters={characters} />;
 };
 
