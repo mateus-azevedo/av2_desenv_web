@@ -1,14 +1,14 @@
-import React, { useEffect, useContext, useState } from "react";
+import React, { useEffect, useContext } from "react";
 import { FirebaseConfig } from "../../../services";
 import { collection, getDocs, getFirestore } from "firebase/firestore";
 
+import { FavoritePage } from "../pages";
 import { FavoriteCharacters } from "../../../context";
 
 const database = getFirestore(FirebaseConfig);
 const userCollectionRef = collection(database, "characters");
 
 const Favorite = () => {
-  // const [characters, setCharacters] = useState(null);
   const { characters, setCharacters } = useContext(FavoriteCharacters.Context);
   /**
    * TENTATIVA DE USO ARQUIVO SEPARADO
@@ -34,7 +34,7 @@ const Favorite = () => {
     getCharacters();
   }, []);
 
-  return <h1>firestore {JSON.stringify(characters)}</h1>;
+  return <FavoritePage characters={characters} />;
 };
 
 export default Favorite;
