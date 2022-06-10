@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import * as Styled from "./styles";
 
 import { FirebaseConfig } from "../../services";
@@ -9,58 +9,44 @@ import {
   doc,
   setDoc,
 } from "firebase/firestore";
+import { AuthGoogle } from "../../context";
 
 const database = getFirestore(FirebaseConfig);
 const userCollectionRef = collection(database, "characters");
 
 export default (props) => {
+  const userAuthenticaded = useContext(AuthGoogle.Context);
+  // const userId = JSON.parse(userAuthenticaded.user).uid;
+  // console.log(userId);
+
   async function saveFavoriteCharacter() {
     try {
-      // const character = await addDoc(userCollectionRef, {
-      //   id: props.character.id || null,
-      //   name: props.character.name || null,
-      //   description: props.character.description || null,
-      //   thumbnail: props.character.thumbnail || null,
-      // });
-
-      // const character = await userCollectionRef.doc(props.character.id).set({
-      //   id: props.character.id || null,
-      //   name: props.character.name || null,
-      //   description: props.character.description || null,
-      //   thumbnail: props.character.thumbnail || null,
-      // });
+      const userId = JSON.parse(userAuthenticaded.user).uid;
+      // console.log(userId);
 
       // const character = await setDoc(
-      //   doc(database, "characters", props.character.id),
+      //   doc(database, "characters", props.character.id.toString()),
       //   {
-      //     id: props.character.id || null,
-      //     name: props.character.name || null,
+      //     id: props.character.id,
+      //     name: props.character.name,
       //     description: props.character.description || null,
-      //     thumbnail: props.character.thumbnail || null,
+      //     thumbnail: props.character.thumbnail,
       //   }
       // );
 
-      // const character = await database
-      //   .collection("characters")
-      //   .doc(props.character.id)
-      //   .set({
-      //     id: props.character.id || null,
-      //     name: props.character.name || null,
-      //     description: props.character.description || null,
-      //     thumbnail: props.character.thumbnail || null,
-      //   });
+      const users = await setDoc(doc(database, "users", userId), {
+        userId: userId,
+        characters: [
+          {
+            id: props.character.id,
+            name: props.character.name,
+            description: props.character.description || null,
+            thumbnail: props.character.thumbnail,
+          },
+        ],
+      });
 
-      const character = await setDoc(
-        doc(database, "characters", props.character.id.toString()),
-        {
-          id: props.character.id,
-          name: props.character.name,
-          description: props.character.description || null,
-          thumbnail: props.character.thumbnail,
-        }
-      );
-
-      console.log(character);
+      console.log("setDoc:", users);
     } catch (e) {
       console.log("Error setDoc: ", e);
     }
