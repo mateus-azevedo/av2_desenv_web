@@ -50,15 +50,6 @@ export default () => {
           </Styled.WrapperLogo>
 
           <Styled.WrapperRight>
-            <Styled.Navbar>
-              <Link to="/">
-                <Styled.NavbarItem>HOME</Styled.NavbarItem>
-              </Link>
-              <Link to="/myfavorite">
-                <Styled.NavbarItem>USUÁRIO</Styled.NavbarItem>
-              </Link>
-            </Styled.Navbar>
-
             <Styled.LoginButton onClick={() => handleLoginFromGoogle()}>
               LOGIN
             </Styled.LoginButton>
