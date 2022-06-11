@@ -40,6 +40,10 @@ export default (props) => {
       </WrapperPage>
     );
   } else {
-    return <h1>FALA O LOGIN</h1>;
+    return (
+      <WrapperPage>
+        <h1>FALA O LOGIN</h1>
+      </WrapperPage>
+    );
   }
 };
