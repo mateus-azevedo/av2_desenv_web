@@ -39,6 +39,7 @@ export const Provider = ({ children }) => {
         sessionStorage.setItem("@AuthFirebase:token", token);
 
         Firestore.createOrUpdateUser(user, user.uid);
+        window.location.reload();
       })
       .catch((err) => {
         const errorCode = err.code;
