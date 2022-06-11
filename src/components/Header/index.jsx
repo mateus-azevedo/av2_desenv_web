@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-// import { Navigate } from "react-router-dom";
 import { AuthGoogle } from "../../context";
 import * as Styled from "./styles";
 
