@@ -12,13 +12,17 @@ import { AuthGoogle } from "../../../../context";
 
 export default (props) => {
   const { signed, user } = useContext(AuthGoogle.Context);
-  const userName = JSON.parse(user).displayName;
+  // const userJson = JSON.parse(user);
+  // console.log(userJson);
   const { characters } = props;
 
   if (signed) {
     return (
       <WrapperPage>
-        <Styled.Title>Hello World, {userName}</Styled.Title>
+        <Styled.Title>
+          Hello World,
+          {/* {userName} */}
+        </Styled.Title>
         <Styled.CardList>
           {characters.map((character) => {
             return (
@@ -36,6 +40,5 @@ export default (props) => {
       </WrapperPage>
     );
   } else {
-    return <h1>Faça Login</h1>;
   }
 };
