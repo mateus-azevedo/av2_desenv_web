@@ -16,6 +16,7 @@ export default (props) => {
               thumbnail={`${character.thumbnail.path}/standard_amazing.${character.thumbnail.extension}`}
               name={character.name}
               description={character.description}
+              remove
             />
           );
         })}
