@@ -7,6 +7,7 @@ export default (props) => {
 
   return (
     <WrapperPage>
+      <Styled.Title>Seus Favoritos</Styled.Title>
       <Styled.CardList>
         {characters?.map((character) => {
           return (
