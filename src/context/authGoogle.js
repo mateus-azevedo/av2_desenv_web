@@ -1,7 +1,7 @@
 import { useState, createContext, useEffect } from "react";
 import { Navigate } from "react-router-dom";
 
-import { FirebaseConfig } from "../services";
+import { FirebaseConfig, Firestore } from "../services";
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
 const provider = new GoogleAuthProvider();
@@ -32,9 +32,13 @@ export const Provider = ({ children }) => {
         const token = credential.accessToken;
         const user = result.user;
 
+        // console.log("user", user);
         setUser(user);
+
         sessionStorage.setItem("@AuthFirebase:user", JSON.stringify(user));
         sessionStorage.setItem("@AuthFirebase:token", token);
+
+        Firestore.createOrUpdateUser(user, user.uid);
       })
       .catch((err) => {
         const errorCode = err.code;

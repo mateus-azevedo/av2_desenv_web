@@ -1,14 +1,54 @@
-import { useContext, useState } from "react";
 import { FirebaseConfig } from ".";
-import { collection, getDocs, getFirestore } from "firebase/firestore";
+import {
+  doc,
+  setDoc,
+  arrayUnion,
+  getFirestore,
+  updateDoc,
+} from "firebase/firestore";
 
-import { FavoriteCharacters } from "../context";
+const db = getFirestore(FirebaseConfig);
 
-const database = getFirestore(FirebaseConfig);
-const userCollectionRef = collection(database, "characters");
+export async function createOrUpdateUser(user, userId) {
+  const userRef = doc(db, "users", userId);
+
+  try {
+    await updateDoc(userRef, {});
+  } catch {
+    await setDoc(userRef, {
+      id: userId,
+      name: user.displayName,
+      characters: [],
+    });
+  }
+}
+
+export async function saveFavoriteCharacter(
+  userId,
+  id,
+  name,
+  description,
+  thumbnail
+) {
+  const userRef = doc(db, "users", userId);
+
+  try {
+    const res = await updateDoc(userRef, {
+      characters: arrayUnion({
+        id,
+        name,
+        description: description || null,
+        thumbnail,
+      }),
+    });
+    console.log("Res sucess:", res);
+  } catch (e) {
+    console.log("Erro res: ", e);
+  }
+}
 
 // export async function getCharacters() {
-//   const { setCharacters } = useContext(FavoriteCharacters.Context);
+//   // const [characters, setCharacters] = useState(null);
 
 //   const data = await getDocs(userCollectionRef);
 //   const charactersCollection = data.docs.map((doc) => ({
@@ -18,18 +58,3 @@ const userCollectionRef = collection(database, "characters");
 
 //   setCharacters(charactersCollection);
 // }
-
-export async function getCharacters() {
-  // const [characters, setCharacters] = useState(null);
-
-  const data = await getDocs(userCollectionRef);
-  const charactersCollection = data.docs.map((doc) => ({
-    ...doc.data(),
-    id: doc.id,
-  }));
-
-  setCharacters(charactersCollection);
-}
-
-// export const getCharacters = async () => {
-// };
