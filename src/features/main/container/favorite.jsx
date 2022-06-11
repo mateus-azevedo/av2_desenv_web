@@ -1,51 +1,31 @@
-import React, { useEffect, useContext } from "react";
-import { FirebaseConfig } from "../../../services";
-import { collection, getDocs, getFirestore } from "firebase/firestore";
+import React, { useEffect, useContext, useState } from "react";
+import { Firestore } from "../../../services";
 
 import { FavoritePage } from "../pages";
-import { FavoriteCharacters } from "../../../context";
-
-const database = getFirestore(FirebaseConfig);
-const userCollectionRef = collection(database, "characters");
+import { AuthGoogle } from "../../../context";
 
 const Favorite = () => {
-  const { characters, setCharacters } = useContext(FavoriteCharacters.Context);
-  /**
-   * TENTATIVA DE USO ARQUIVO SEPARADO
-   */
-  // useEffect(() => {
-  //   Firestore.getCharacters();
-  // }, []);
+  const [collectionCharacters, setCollectionCharacters] = useState([]);
+  const { user } = useContext(AuthGoogle.Context);
+  const userId = JSON.parse(user).uid;
 
-  /**
-   * TENTATIVA NO MESMO ARQUIVO
-   */
   useEffect(() => {
-    const getCharacters = async () => {
-      const data = await getDocs(userCollectionRef);
-      const charactersCollection = data.docs.map((doc) => {
-        // console.log(doc);
-        console.log(doc._document.data.value.mapValue.fields.id.integerValue);
-        const idCharacter =
-          doc._document.data.value.mapValue.fields.id.integerValue;
-
-        return {
-          ...doc.data(),
-          id: idCharacter,
-        };
+    function returnCharactersPromise() {
+      return new Promise((resolve) => {
+        resolve(Firestore.getAllFavoriteCharacter(userId));
       });
+    }
 
-      console.log("charactersCollection", charactersCollection);
-      setCharacters(charactersCollection);
-    };
+    returnCharactersPromise().then((characters) =>
+      setCollectionCharacters(characters)
+    );
 
-    getCharacters();
+    console.log("favoriteContainer:userid", userId);
   }, []);
 
-  // console.log(characters);
+  console.log("favoriteContainer:collectionCharacters", collectionCharacters);
 
-  // return <h1>firestore {JSON.stringify(characters)}</h1>;
-  return <FavoritePage characters={characters} />;
+  return <FavoritePage characters={collectionCharacters} />;
 };
 
 export default Favorite;

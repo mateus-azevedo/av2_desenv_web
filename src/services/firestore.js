@@ -5,6 +5,7 @@ import {
   arrayUnion,
   getFirestore,
   updateDoc,
+  getDoc,
 } from "firebase/firestore";
 
 const db = getFirestore(FirebaseConfig);
@@ -45,6 +46,42 @@ export async function saveFavoriteCharacter(
   } catch (e) {
     console.log("Erro res: ", e);
   }
+}
+
+export async function getAllFavoriteCharacter(userId) {
+  const userRef = doc(db, "users", userId);
+
+  const data = await getDoc(userRef);
+  console.log("GAFC:data: ", data);
+
+  const charactersArray =
+    data._document.data.value.mapValue.fields.characters.arrayValue.values;
+  console.log("GAFC:values", charactersArray);
+
+  const characterField = charactersArray.map((value) => {
+    return value.mapValue.fields;
+  });
+  console.log("GAFC:characterField", characterField);
+
+  const characterObjectArray = [];
+  characterField.map((value) => {
+    const object = {
+      description: value.description.stringValue || null,
+      id: value.id.integerValue,
+      name: value.name.stringValue,
+      thumbnail: {
+        extension: value.thumbnail.mapValue.fields.extension.stringValue,
+        path: value.thumbnail.mapValue.fields.path.stringValue,
+      },
+    };
+
+    characterObjectArray.push(object);
+    console.log("GAFC:characterObject", value);
+  });
+
+  console.log("GAFC:characterObjectArray:", characterObjectArray);
+
+  return characterObjectArray;
 }
 
 // export async function getCharacters() {
