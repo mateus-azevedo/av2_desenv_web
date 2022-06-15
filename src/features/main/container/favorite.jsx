@@ -20,10 +20,10 @@ const Favorite = () => {
       setCollectionCharacters(characters)
     );
 
-    console.log("favoriteContainer:userid", userId);
+    // console.log("favoriteContainer:userid", userId);
   }, []);
 
-  console.log("favoriteContainer:collectionCharacters", collectionCharacters);
+  // console.log("favoriteContainer:collectionCharacters", collectionCharacters);
 
   return <FavoritePage characters={collectionCharacters} />;
 };

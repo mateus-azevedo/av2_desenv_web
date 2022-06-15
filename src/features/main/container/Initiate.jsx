@@ -46,6 +46,8 @@ const Initiate = () => {
     window.addEventListener("scroll", handleScroll);
   }, []);
 
+  // console.log("homeContainer:collectionCharacters", characters);
+
   return <HomePage characters={characters} />;
 };
 
