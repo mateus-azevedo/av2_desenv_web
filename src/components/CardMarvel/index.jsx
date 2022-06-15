@@ -8,9 +8,8 @@ export default (props) => {
   const { user } = useContext(AuthGoogle.Context);
   const userId = JSON.parse(user).uid;
 
-  console.log(!props.remove);
-
   if (!props.remove) {
+    // console.log("props.character:", props.character);
     return (
       <Styled.Wrapper>
         <Styled.Image variant="top" src={props.thumbnail} alt={props.name} />
@@ -34,6 +33,7 @@ export default (props) => {
       </Styled.Wrapper>
     );
   } else {
+    // console.log("props.character:", props.character);
     return (
       <Styled.Wrapper>
         <Styled.Image variant="top" src={props.thumbnail} alt={props.name} />
@@ -42,7 +42,7 @@ export default (props) => {
           <Styled.Description>{props.description}</Styled.Description>
           <Styled.SaveButton
             onClick={() => {
-              Firestore.saveFavoriteCharacter(
+              Firestore.deleteFavoriteCharacter(
                 userId,
                 props.character.id,
                 props.character.name,

@@ -5,12 +5,11 @@ import {
   arrayUnion,
   getFirestore,
   getDoc,
-  collection,
   arrayRemove,
+  updateDoc,
 } from "firebase/firestore";
 
 const db = getFirestore(FirebaseConfig);
-const userCollectionRef = collection(db, "users");
 
 export async function createOrUpdateUser(user, userId) {
   const userRef = doc(db, "users", userId);
@@ -24,8 +23,8 @@ export async function createOrUpdateUser(user, userId) {
     { merge: true }
   );
 
-  console.log("user", user);
-  console.log("userId", userId);
+  // console.log("user", user);
+  // console.log("userId", userId);
 }
 
 export async function saveFavoriteCharacter(
@@ -55,26 +54,28 @@ export async function getAllFavoriteCharacter(userId) {
   const userRef = doc(db, "users", userId);
 
   const data = await getDoc(userRef);
-  console.log("GAFC:data.characters: ", data.data().characters);
+  // console.log("GAFC:data.characters: ", data.data().characters);
   const charactersObjectArray = data.data().characters;
 
   return charactersObjectArray;
 }
 
-// export async function deleteFavoriteCharacter(
-//   userId,
-//   id
-//   // name,
-//   // description,
-//   // thumbnail
-// ) {
-//   const userRef = doc(db, "users", userId);
+export async function deleteFavoriteCharacter(
+  userId,
+  id,
+  name,
+  description,
+  thumbnail
+) {
+  const userRef = doc(db, "users", userId);
+  // console.log("delete:", name);
 
-//   await updateDoc(
-//     userRef,
-//     {
-//       characters: arrayRemove(id),
-//     },
-//     { merge: true }
-//   );
-// }
+  await updateDoc(userRef, {
+    characters: arrayRemove({
+      id,
+      name,
+      description,
+      thumbnail,
+    }),
+  });
+}
