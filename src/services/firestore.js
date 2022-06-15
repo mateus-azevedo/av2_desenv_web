@@ -4,8 +4,8 @@ import {
   setDoc,
   arrayUnion,
   getFirestore,
-  updateDoc,
   getDoc,
+  arrayRemove,
 } from "firebase/firestore";
 
 const db = getFirestore(FirebaseConfig);
@@ -13,15 +13,17 @@ const db = getFirestore(FirebaseConfig);
 export async function createOrUpdateUser(user, userId) {
   const userRef = doc(db, "users", userId);
 
-  try {
-    await updateDoc(userRef, {});
-  } catch {
-    await setDoc(userRef, {
+  await setDoc(
+    userRef,
+    {
       id: userId,
       name: user.displayName,
-      characters: [],
-    });
-  }
+    },
+    { merge: true }
+  );
+
+  console.log("user", user);
+  console.log("userId", userId);
 }
 
 export async function saveFavoriteCharacter(
@@ -33,19 +35,18 @@ export async function saveFavoriteCharacter(
 ) {
   const userRef = doc(db, "users", userId);
 
-  try {
-    const res = await updateDoc(userRef, {
+  await setDoc(
+    userRef,
+    {
       characters: arrayUnion({
         id,
         name,
         description: description || null,
         thumbnail,
       }),
-    });
-    console.log("Res sucess:", res);
-  } catch (e) {
-    console.log("Erro res: ", e);
-  }
+    },
+    { merge: true }
+  );
 }
 
 export async function getAllFavoriteCharacter(userId) {
@@ -84,14 +85,20 @@ export async function getAllFavoriteCharacter(userId) {
   return characterObjectArray;
 }
 
-// export async function getCharacters() {
-//   // const [characters, setCharacters] = useState(null);
+// export async function deleteFavoriteCharacter(
+//   userId,
+//   id
+//   // name,
+//   // description,
+//   // thumbnail
+// ) {
+//   const userRef = doc(db, "users", userId);
 
-//   const data = await getDocs(userCollectionRef);
-//   const charactersCollection = data.docs.map((doc) => ({
-//     ...doc.data(),
-//     id: doc.id,
-//   }));
-
-//   setCharacters(charactersCollection);
+//   await updateDoc(
+//     userRef,
+//     {
+//       characters: arrayRemove(id),
+//     },
+//     { merge: true }
+//   );
 // }
