@@ -25,12 +25,12 @@ export default () => {
 
           <Styled.WrapperRight>
             <Styled.Navbar>
-              <Link to="/">
+              <Styled.LinkRouter to="/">
                 <Styled.NavbarItem>HOME</Styled.NavbarItem>
-              </Link>
-              <Link to="/myfavorite">
+              </Styled.LinkRouter>
+              <Styled.LinkRouter to="/myfavorite">
                 <Styled.NavbarItem>USUÁRIO</Styled.NavbarItem>
-              </Link>
+              </Styled.LinkRouter>
             </Styled.Navbar>
 
             <Styled.LoginButton onClick={() => handleLogoutFromGoogle()}>
