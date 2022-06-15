@@ -5,10 +5,12 @@ import {
   arrayUnion,
   getFirestore,
   getDoc,
+  collection,
   arrayRemove,
 } from "firebase/firestore";
 
 const db = getFirestore(FirebaseConfig);
+const userCollectionRef = collection(db, "users");
 
 export async function createOrUpdateUser(user, userId) {
   const userRef = doc(db, "users", userId);
@@ -53,36 +55,10 @@ export async function getAllFavoriteCharacter(userId) {
   const userRef = doc(db, "users", userId);
 
   const data = await getDoc(userRef);
-  console.log("GAFC:data: ", data);
+  console.log("GAFC:data.characters: ", data.data().characters);
+  const charactersObjectArray = data.data().characters;
 
-  const charactersArray =
-    data._document.data.value.mapValue.fields.characters.arrayValue.values;
-  console.log("GAFC:values", charactersArray);
-
-  const characterField = charactersArray.map((value) => {
-    return value.mapValue.fields;
-  });
-  console.log("GAFC:characterField", characterField);
-
-  const characterObjectArray = [];
-  characterField.map((value) => {
-    const object = {
-      description: value.description.stringValue || null,
-      id: value.id.integerValue,
-      name: value.name.stringValue,
-      thumbnail: {
-        extension: value.thumbnail.mapValue.fields.extension.stringValue,
-        path: value.thumbnail.mapValue.fields.path.stringValue,
-      },
-    };
-
-    characterObjectArray.push(object);
-    console.log("GAFC:characterObject", value);
-  });
-
-  console.log("GAFC:characterObjectArray:", characterObjectArray);
-
-  return characterObjectArray;
+  return charactersObjectArray;
 }
 
 // export async function deleteFavoriteCharacter(
