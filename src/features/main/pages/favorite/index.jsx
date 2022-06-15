@@ -5,7 +5,7 @@ import * as Styled from "./styles";
 export default (props) => {
   const { characters } = props;
 
-  console.log("characters:favorite:", characters.length);
+  // console.log("characters:favorite:", characters.length);
   return (
     <WrapperPage>
       <Styled.Title>Seus Favoritos</Styled.Title>

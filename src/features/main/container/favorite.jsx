@@ -21,7 +21,7 @@ const Favorite = () => {
     );
 
     // console.log("favoriteContainer:userid", userId);
-  }, []);
+  });
 
   // console.log("favoriteContainer:collectionCharacters", collectionCharacters);
 
