@@ -42,7 +42,7 @@ export default (props) => {
   } else {
     return (
       <WrapperPage>
-        <h1>FALA O LOGIN</h1>
+        <h1>FAÇA O LOGIN</h1>
       </WrapperPage>
     );
   }

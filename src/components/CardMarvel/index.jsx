@@ -8,26 +8,53 @@ export default (props) => {
   const { user } = useContext(AuthGoogle.Context);
   const userId = JSON.parse(user).uid;
 
-  return (
-    <Styled.Wrapper>
-      <Styled.Image variant="top" src={props.thumbnail} alt={props.name} />
-      <Styled.Content>
-        <Styled.Title>{props.name}</Styled.Title>
-        <Styled.Description>{props.description}</Styled.Description>
-        <Styled.SaveButton
-          onClick={() => {
-            Firestore.saveFavoriteCharacter(
-              userId,
-              props.character.id,
-              props.character.name,
-              props.character.description,
-              props.character.thumbnail
-            );
-          }}
-        >
-          Add Favorite
-        </Styled.SaveButton>
-      </Styled.Content>
-    </Styled.Wrapper>
-  );
+  if (!props.remove) {
+    // console.log("props.character:", props.character);
+    return (
+      <Styled.Wrapper>
+        <Styled.Image variant="top" src={props.thumbnail} alt={props.name} />
+        <Styled.Content>
+          <Styled.Title>{props.name}</Styled.Title>
+          <Styled.Description>{props.description}</Styled.Description>
+          <Styled.SaveButton
+            onClick={() => {
+              Firestore.saveFavoriteCharacter(
+                userId,
+                props.character.id,
+                props.character.name,
+                props.character.description,
+                props.character.thumbnail
+              );
+            }}
+          >
+            Add Favorite
+          </Styled.SaveButton>
+        </Styled.Content>
+      </Styled.Wrapper>
+    );
+  } else {
+    // console.log("props.character:", props.character);
+    return (
+      <Styled.Wrapper>
+        <Styled.Image variant="top" src={props.thumbnail} alt={props.name} />
+        <Styled.Content>
+          <Styled.Title>{props.name}</Styled.Title>
+          <Styled.Description>{props.description}</Styled.Description>
+          <Styled.SaveButton
+            onClick={() => {
+              Firestore.deleteFavoriteCharacter(
+                userId,
+                props.character.id,
+                props.character.name,
+                props.character.description,
+                props.character.thumbnail
+              );
+            }}
+          >
+            Remove Favorite
+          </Styled.SaveButton>
+        </Styled.Content>
+      </Styled.Wrapper>
+    );
+  }
 };

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import logo_unicarioca from "../../assets/logo_unicarioca.png";
 import logo_marvel from "../../assets/logo_marvel.svg";
 
@@ -14,6 +15,7 @@ export const WrapperContent = styled.div`
   align-items: center;
   max-width: 1280px;
   margin: 0 auto;
+  padding: 0 20px;
 `;
 
 export const WrapperLogo = styled.div`
@@ -42,6 +44,10 @@ export const Navbar = styled.ul`
   list-style-type: none;
 
   padding: 0;
+`;
+
+export const LinkRouter = styled(Link)`
+  text-decoration: none;
 `;
 
 export const NavbarItem = styled.li`
