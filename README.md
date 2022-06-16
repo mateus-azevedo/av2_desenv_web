@@ -49,12 +49,10 @@ https://blog.matheuscastiglioni.com.br/como-organizar-projetos-em-react/
   const firebaseConfig = {
     apiKey: "configuracaofirebase",
     authDomain: "configuracaofirebase",
-    databaseURL: "https:// ",
     projectId: "configuracaofirebase",
     storageBucket: "configuracaofirebase.appspot.com",
     messagingSenderId: "configuracaofirebase",
     appId: "1:configuracaofirebase:web:configuracaofirebase",
-    measurementId: "G-configuracaofirebase",
   };
   ```
 - Cole as informações entre aspas (") após o símbolo de igual (=) no arquivo `.env.example` no projeto
