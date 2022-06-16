@@ -1,9 +1,9 @@
 # AV2/AV3 - Desenvolvimento de Aplicações Web
 
 <div align="center">
-<a href="https://www.unicarioca.edu.br/">
-<img src="./doc/logo_unicarioca.png" width="150" />
-</a>
+  <a href="https://www.unicarioca.edu.br/">
+    <img src="./doc/logo_unicarioca.png" width="150" />
+  </a>
 </div>
 
 ## Centro Universitário Carioca - [UniCarioca](https://www.unicarioca.edu.br/)
@@ -81,5 +81,35 @@ https://blog.matheuscastiglioni.com.br/como-organizar-projetos-em-react/
 
 - Renomeie o arquivo `.env.example` para `.env`
 - Execute o projeto com o comando no terminal `yarn start`
+
+---
+
+## 🤩 Como contribuir?
+
+Após realizar a configuração de ambiente como citado anteriormente. Faça:
+
+### Passo 1
+
+- O Fork deste projeto
+
+### Passo 2
+
+- Realize os passos <a href="#passo-3">3</a>, <a href="#passo-4">4</a>, <a href="#passo-5">5</a> do tópico "<a href="#-como-executar-o-projeto">🤔 Como executar o projeto?</a>"
+
+### Passo 3
+
+- Crie sua feature branch usando `git checkout -b username/my-feature` troque 'username' pelo seu nickname no GitHub e 'my-feature' pelo alteração que você fará
+
+### Passo 4
+
+- As mensagens de commit deve seguir este padrão `git commit -m 'feat: My new feature'`
+
+### Passo 5
+
+- Após terminado suas modificações realize o push da sua branch com o comando `git push origin username/my-feature`
+
+### Passo 6
+
+- Crie um novo pull request
 
 ---
