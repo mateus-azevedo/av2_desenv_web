@@ -8,7 +8,31 @@
 
 ## Centro Universitário Carioca - [UniCarioca](https://www.unicarioca.edu.br/)
 
+### Informações Gerais:
+
 Está avaliação faz parte da disciplina "Desenvolvimento de Aplicações Web" ministrada pelo Mestre Antonio Felipe Podgorski realizada no 5º período do curso [Análise e Desenvolvimento de Sistemas](https://unicarioca.edu.br/cursos/graduacao/analise-e-desenvolvimento-de-sistemas) coordenado por André Sobral e Marcelo Perantoni no ano de 2022.
+
+### Descrição da atividade:
+
+<p align="center">Atividade Avaliativa</p>
+
+O grupo deverá desenvolver um website utilizando React, através do [CodeSandBox](https://codesandbox.io/) e ao final disponibilizar o mesmo através de um arquivo PDF com o link da aplicação e o nome dos integrantes do grupo, que deverá ser postado no AVA.
+
+Em relação ao website é esperado que alguns pontos sejam abordados, sendo estes:
+
+- Utilizar React Router - https://reactrouter.com/
+- Consumir uma API - https://github.com/public-apis/public-apis
+- Context API
+- Utilizar a Autenticação do Firebase
+- Fazer o Uso do Firestore
+- Estilizar com CSS
+
+Cada uma das atividades implementadas irá valer até 1,0 ponto, podendo totalizar 6,0 pontos.
+Cada grupo poderá ter até 06 integrantes.
+
+### Integrantes do grupo:
+
+Mateus Santos de Azevedo - 2020100086
 
 ---
 
