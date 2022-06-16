@@ -36,6 +36,17 @@ Mateus Santos de Azevedo - 2020100086
 
 ---
 
+## Tabela de Conteúdo
+
+<ul>
+  <li><a href="#-tecnologias">Tecnologias</a></li>
+  <li><a href="#-estrutura-do-projeto">Estrutura do projeto</a></li>
+  <li><a href="#-como-executar-o-projeto">Como executar o projeto?</a></li>
+  <li><a href="#-como-contribuir">Como contribuir?</a></li>
+</ul>
+
+---
+
 ## 💻 Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
@@ -52,6 +63,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 ## 📋 Estrutura do projeto
 
 Organizado por features
+
 https://blog.matheuscastiglioni.com.br/como-organizar-projetos-em-react/
 
 ---
