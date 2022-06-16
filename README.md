@@ -1,27 +1,27 @@
 # AV2/AV3 - Desenvolvimento de Aplicações Web
 
 <div align="center">
-  <a href="https://www.unicarioca.edu.br/">
+  <a href="https://www.unicarioca.edu.br/" target="_blank">
     <img src="./doc/logo_unicarioca.png" width="150" />
   </a>
 </div>
 
-## Centro Universitário Carioca - [UniCarioca](https://www.unicarioca.edu.br/)
+## Centro Universitário Carioca - <a href="https://www.unicarioca.edu.br/" target="_blank">UniCarioca</a>
 
 ### Informações Gerais:
 
-Esta avaliação faz parte da disciplina "Desenvolvimento de Aplicações Web" ministrada pelo Mestre Antonio Felipe Podgorski realizada no 5º período do curso [Análise e Desenvolvimento de Sistemas](https://unicarioca.edu.br/cursos/graduacao/analise-e-desenvolvimento-de-sistemas) coordenado por André Sobral e Marcelo Perantoni no ano de 2022.
+Esta avaliação faz parte da disciplina "Desenvolvimento de Aplicações Web" ministrada pelo Mestre Antonio Felipe Podgorski realizada no 5º período do curso <a href="https://unicarioca.edu.br/cursos/graduacao/analise-e-desenvolvimento-de-sistemas" target="_blank">Análise e Desenvolvimento de Sistemas</a> coordenado por André Sobral e Marcelo Perantoni no ano de 2022.
 
 ### Descrição da atividade:
 
 <p align="center">Atividade Avaliativa</p>
 
-O grupo deverá desenvolver um website utilizando React, através do [CodeSandBox](https://codesandbox.io/) e ao final disponibilizar o mesmo através de um arquivo PDF com o link da aplicação e o nome dos integrantes do grupo, que deverá ser postado no AVA.
+O grupo deverá desenvolver um website utilizando React, através do <a href="https://codesandbox.io/" target="_blank">CodeSandBox</a> e ao final disponibilizar o mesmo através de um arquivo PDF com o link da aplicação e o nome dos integrantes do grupo, que deverá ser postado no AVA.
 
 Em relação ao website é esperado que alguns pontos sejam abordados, sendo estes:
 
-- Utilizar React Router - https://reactrouter.com/
-- Consumir uma API - https://github.com/public-apis/public-apis
+- Utilizar React Router - <a href="https://reactrouter.com/" target="_blank">https://reactrouter.com/</a>
+- Consumir uma API - <a href="https://github.com/public-apis/public-apis" target="_blank">https://github.com/public-apis/public-apis</a>
 - Context API
 - Utilizar a Autenticação do Firebase
 - Fazer o Uso do Firestore
@@ -51,12 +51,12 @@ Mateus Santos de Azevedo - 2020100086
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-- [Axios](https://axios-http.com/) para realizar requisições;
-- [Firebase](https://firebase.google.com/) para armazenar os dados e realizar autenticação;
-- [Bootstrap](https://getbootstrap.com/) para agilizar no estilo de alguns componentes;
-- [Styled-Components](https://styled-components.com/) para estilização dos componentes e padronizar o projeto;
-- [React Router](https://reactrouter.com/) para realizar as navegações e verificações de permissão de acesso;
-- [Dotenv](https://create-react-app.dev/docs/adding-custom-environment-variables) para distribuir as credenciais secretas do projeto;
+- <a href="https://axios-http.com/" target="_blank">Axios</a> para realizar requisições;
+- <a href="https://firebase.google.com/" target="_blank">Firebase</a> para armazenar os dados e realizar autenticação;
+- <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a> para agilizar no estilo de alguns componentes;
+- <a href="https://styled-components.com/" target="_blank">Styled-Components</a> para estilização dos componentes e padronizar o projeto;
+- <a href="https://reactrouter.com/" target="_blank">React Router</a> para realizar as navegações e verificações de permissão de acesso;
+- <a href="https://create-react-app.dev/docs/adding-custom-environment-variables" target="_blank">Dotenv</a> para distribuir as credenciais secretas do projeto;
 
 ---
 
@@ -64,7 +64,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 Organizado por features
 
-https://blog.matheuscastiglioni.com.br/como-organizar-projetos-em-react/
+- <a href="https://blog.matheuscastiglioni.com.br/como-organizar-projetos-em-react/" target="_blank">Como Organizar Projetos Em React</a>
 
 ---
 
@@ -72,8 +72,7 @@ https://blog.matheuscastiglioni.com.br/como-organizar-projetos-em-react/
 
 ### Passo 1
 
-- Configure o ambiente para executar a aplicação React neste link:
-  [Como instalar o React.js](https://www.freecodecamp.org/portuguese/news/como-instalar-o-react-js-com-create-react-app/)
+- Configure o ambiente para executar a aplicação React neste link: <a href="https://www.freecodecamp.org/portuguese/news/como-instalar-o-react-js-com-create-react-app/" target="_blank">Como instalar o React.js</a>
 
 ### Passo 2
 
@@ -82,8 +81,7 @@ https://blog.matheuscastiglioni.com.br/como-organizar-projetos-em-react/
 
 ### Passo 3
 
-- Crie um projeto Web no Firebase
-  https://firebase.google.com/
+- Crie um projeto Web no <a href="https://firebase.google.com/" target="_blank">Firebase</a>
 
 - Copie as informações do objeto firebaseConfig
   - Estrutura do firebaseConfig
@@ -103,7 +101,7 @@ https://blog.matheuscastiglioni.com.br/como-organizar-projetos-em-react/
 ### Passo 4
 
 - Crie uma conta no Portal do Desenvolvedor Marvel
-  https://developer.marvel.com/
+  <a href="https://developer.marvel.com/" target="_blank">https://developer.marvel.com/</a>
 
   Você receberá duas chaves:
   <div align="center">
@@ -123,7 +121,7 @@ https://blog.matheuscastiglioni.com.br/como-organizar-projetos-em-react/
 
 ## 🤩 Como contribuir?
 
-Após realizar a <a href="https://www.freecodecamp.org/portuguese/news/como-instalar-o-react-js-com-create-react-app/">configuração de ambiente React.JS</a> como citado anteriormente.
+Após realizar a <a href="https://www.freecodecamp.org/portuguese/news/como-instalar-o-react-js-com-create-react-app/" target="_blank">configuração de ambiente React.JS</a> como citado anteriormente.
 Faça:
 
 ### Passo 1
