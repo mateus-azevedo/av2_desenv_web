@@ -63,8 +63,8 @@ https://blog.matheuscastiglioni.com.br/como-organizar-projetos-em-react/
 - Crie uma conta no Portal do Desenvolvedor Marvel
   https://developer.marvel.com/
 
-  Você receberá duas chaves:
-  [IMAGEM DAS CHAVES]
+  Você receberá duas chaves:  
+  ![](doc/marvel-developer-example.jpg)
 
 - Cole as chaves após o símbolo de igual (=) no arquivo `.env.example` no projeto
   https://github.com/mateus-azevedo/av2_desenv_web/blob/44e9fa1612ff96104d4d65a07033357d2d2275f2/.env.example#L1-L5
