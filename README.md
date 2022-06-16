@@ -1,5 +1,11 @@
 # AV2/AV3 - Desenvolvimento de Aplicações Web
 
+<div align="center">
+<a href="https://www.unicarioca.edu.br/">
+<img src="./doc/logo_unicarioca.png" width="150" />
+</a>
+</div>
+
 ## Centro Universitário Carioca - [UniCarioca](https://www.unicarioca.edu.br/)
 
 Está avaliação faz parte da disciplina "Desenvolvimento de Aplicações Web" ministrada pelo Mestre Antonio Felipe Podgorski realizada no 5º período do curso [Análise e Desenvolvimento de Sistemas](https://unicarioca.edu.br/cursos/graduacao/analise-e-desenvolvimento-de-sistemas) coordenado por André Sobral e Marcelo Perantoni no ano de 2022.
