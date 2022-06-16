@@ -10,7 +10,7 @@
 
 ### Informações Gerais:
 
-Está avaliação faz parte da disciplina "Desenvolvimento de Aplicações Web" ministrada pelo Mestre Antonio Felipe Podgorski realizada no 5º período do curso [Análise e Desenvolvimento de Sistemas](https://unicarioca.edu.br/cursos/graduacao/analise-e-desenvolvimento-de-sistemas) coordenado por André Sobral e Marcelo Perantoni no ano de 2022.
+Esta avaliação faz parte da disciplina "Desenvolvimento de Aplicações Web" ministrada pelo Mestre Antonio Felipe Podgorski realizada no 5º período do curso [Análise e Desenvolvimento de Sistemas](https://unicarioca.edu.br/cursos/graduacao/analise-e-desenvolvimento-de-sistemas) coordenado por André Sobral e Marcelo Perantoni no ano de 2022.
 
 ### Descrição da atividade:
 
@@ -116,13 +116,15 @@ https://blog.matheuscastiglioni.com.br/como-organizar-projetos-em-react/
 ### Passo 5
 
 - Renomeie o arquivo `.env.example` para `.env`
-- Execute o projeto com o comando no terminal `yarn start`
+- Execute o comando `yarn` no terminal para atualizar as dependencias do projeto
+- Execute o projeto com o comando `yarn start` no terminal
 
 ---
 
 ## 🤩 Como contribuir?
 
-Após realizar a configuração de ambiente como citado anteriormente. Faça:
+Após realizar a <a href="https://www.freecodecamp.org/portuguese/news/como-instalar-o-react-js-com-create-react-app/">configuração de ambiente React.JS</a> como citado anteriormente.
+Faça:
 
 ### Passo 1
 
@@ -134,7 +136,7 @@ Após realizar a configuração de ambiente como citado anteriormente. Faça:
 
 ### Passo 3
 
-- Crie sua feature branch usando `git checkout -b username/my-feature` troque 'username' pelo seu nickname no GitHub e 'my-feature' pelo alteração que você fará
+- Crie sua feature branch usando `git checkout -b username/my-feature` troque 'username' pelo seu nickname do GitHub e 'my-feature' pela alteração que você fará
 
 ### Passo 4
 
@@ -142,7 +144,7 @@ Após realizar a configuração de ambiente como citado anteriormente. Faça:
 
 ### Passo 5
 
-- Após terminado suas modificações realize o push da sua branch com o comando `git push origin username/my-feature`
+- Após terminado suas modificações realize o push da sua branch com o comando `git push origin username/my-feature` (obs: deve ser o mesmo nome da branch local)
 
 ### Passo 6
 
