@@ -57,7 +57,7 @@ https://blog.matheuscastiglioni.com.br/como-organizar-projetos-em-react/
     measurementId: "G-configuracaofirebase",
   };
   ```
-- Cole as informações entre aspas (") no arquivo `.env.example` no projeto
+- Cole as informações entre aspas (") após o símbolo de igual (=) no arquivo `.env.example` no projeto
   https://github.com/mateus-azevedo/av2_desenv_web/blob/44e9fa1612ff96104d4d65a07033357d2d2275f2/.env.example#L7-L13
 
 ### Passo 4
@@ -68,7 +68,7 @@ https://blog.matheuscastiglioni.com.br/como-organizar-projetos-em-react/
   Você receberá duas chaves:
   [IMAGEM DAS CHAVES]
 
-- Cole as chaves no arquivo `.env.example` no projeto
+- Cole as chaves após o símbolo de igual (=) no arquivo `.env.example` no projeto
   https://github.com/mateus-azevedo/av2_desenv_web/blob/44e9fa1612ff96104d4d65a07033357d2d2275f2/.env.example#L1-L5
 
 ### Passo 5
