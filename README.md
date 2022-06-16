@@ -1,12 +1,12 @@
 # AV2/AV3 - Desenvolvimento de Aplicações Web
 
-### Centro Universitário Carioca - [UniCarioca](https://www.unicarioca.edu.br/)
+## Centro Universitário Carioca - [UniCarioca](https://www.unicarioca.edu.br/)
 
 Está avaliação faz parte da disciplina "Desenvolvimento de Aplicações Web" ministrada pelo Mestre Antonio Felipe Podgorski realizada no 5º período do curso [Análise e Desenvolvimento de Sistemas](https://unicarioca.edu.br/cursos/graduacao/analise-e-desenvolvimento-de-sistemas) coordenado por André Sobral e Marcelo Perantoni no ano de 2022.
 
 ---
 
-### Tecnologias
+## 💻 Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
@@ -19,9 +19,59 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ---
 
-### Estrutura do projeto
+## 📋 Estrutura do projeto
 
 Organizado por features
 https://blog.matheuscastiglioni.com.br/como-organizar-projetos-em-react/
+
+---
+
+## 🤔 Como executar o projeto?
+
+### Passo 1
+
+- Configure o ambiente para executar a aplicação React neste link:
+  [Como instalar o React.js](https://www.freecodecamp.org/portuguese/news/como-instalar-o-react-js-com-create-react-app/)
+
+### Passo 2
+
+- Clone o projeto para sua máquina local usando:
+  `git clone https://github.com/mateus-azevedo/av2_desenv_web.git`
+
+### Passo 3
+
+- Crie um projeto Web no Firebase
+  https://firebase.google.com/
+
+- Copie as informações do objeto firebaseConfig
+  - Estrutura do firebaseConfig
+  ```js
+  const firebaseConfig = {
+    apiKey: "configuracaofirebase",
+    authDomain: "configuracaofirebase",
+    databaseURL: "https:// ",
+    projectId: "configuracaofirebase",
+    storageBucket: "configuracaofirebase.appspot.com",
+    messagingSenderId: "configuracaofirebase",
+    appId: "1:configuracaofirebase:web:configuracaofirebase",
+    measurementId: "G-configuracaofirebase",
+  };
+  ```
+- Cole as informações entre aspas (") no arquivo `.env.example` no projeto
+  https://github.com/mateus-azevedo/av2_desenv_web/blob/44e9fa1612ff96104d4d65a07033357d2d2275f2/.env.example#L7-L13
+
+### Passo 4
+
+- Crie uma conta no Portal do Desenvolvedor Marvel
+  https://developer.marvel.com/
+  Você receberá duas chaves:
+  [IMAGEM DAS CHAVES]
+- Cole as chaves no arquivo `.env.example` no projeto
+  https://github.com/mateus-azevedo/av2_desenv_web/blob/44e9fa1612ff96104d4d65a07033357d2d2275f2/.env.example#L1-L5
+
+### Passo 5
+
+- Renomeie o arquivo `.env.example` para `.env`
+- Execute o projeto com o comando no terminal `yarn start`
 
 ---
