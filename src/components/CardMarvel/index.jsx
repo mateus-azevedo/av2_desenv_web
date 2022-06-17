@@ -26,7 +26,16 @@ export default (props) => {
                 props.character.description,
                 props.character.thumbnail
               );
-              toast.success("O personagem foi adicionado aos favoritos");
+              toast.success("O personagem foi adicionado aos favoritos", {
+                duration: 2000,
+                style: {
+                  color: "white",
+                  backgroundColor: "#1e8c45",
+                  marginTop: 50,
+                  fontWeight: 700,
+                  fontSize: 18,
+                },
+              });
             }}
           >
             Add Favorite
@@ -51,7 +60,16 @@ export default (props) => {
                 props.character.description,
                 props.character.thumbnail
               );
-              toast.error("O personagem foi removido dos favoritos");
+              toast.error("O personagem foi removido dos favoritos", {
+                duration: 2000,
+                style: {
+                  color: "white",
+                  backgroundColor: "#900A22",
+                  marginTop: 50,
+                  fontWeight: 700,
+                  fontSize: 18,
+                },
+              });
             }}
           >
             Remove Favorite
