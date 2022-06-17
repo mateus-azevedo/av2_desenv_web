@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import toast from "react-hot-toast";
 import * as Styled from "./styles";
 
 import { Firestore } from "../../services";
@@ -25,6 +26,7 @@ export default (props) => {
                 props.character.description,
                 props.character.thumbnail
               );
+              toast.success("O personagem foi adicionado aos favoritos");
             }}
           >
             Add Favorite
@@ -49,6 +51,7 @@ export default (props) => {
                 props.character.description,
                 props.character.thumbnail
               );
+              toast.error("O personagem foi removido dos favoritos");
             }}
           >
             Remove Favorite
